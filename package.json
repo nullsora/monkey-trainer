@@ -1,0 +1,17 @@
+{
+  "name": "monkey-trainer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "NullSora",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "@nut-tree/nut-js": "^4.2.0",
+    "jimp": "^1.6.0",
+    "node-tesseract-ocr": "^2.2.1",
+    "tesseract.js": "^5.1.1"
+  }
+}
