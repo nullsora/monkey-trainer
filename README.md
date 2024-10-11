@@ -41,31 +41,49 @@
 ###### 开发前的配置要求
 
 1. 确保您已下载过tesseract及其英文识别包，并将其添加进环境变量
-2. NodeJS (Yarn is better)
+2. 准备好NodeJS以及npm (Yarn is better)
+3. 可以运行小猿口算并可使用鼠标操作的窗口 (如安卓模拟器)
 
 ###### **安装步骤**
 
 1. 克隆本仓库
 
-```sh
-git clone https://github.com/nullsora/monkey-trainer.git
-cd ./monkey-trainer
-```
+   ```sh
+   git clone https://github.com/nullsora/monkey-trainer.git
+   cd ./monkey-trainer
+   ```
 
 2. 安装依赖
 
-```sh
-yarn
-```
+   ```sh
+   yarn
+   ```
 
-3. 启用脚本
+3. 修改`config.json`
 
-```sh
-yarn start
-```
+   您的`config.json`最终应该如下：
 
-请在胜利/失败/平局页面启动，或启动后立刻点击开始。
-注意：脚本速度约为0.53s/题，请不要和抓包以及改数据的天龙人作比较。
+   ```json
+   {
+     "scale": 1.75, // 屏幕缩放倍数
+     "window": {
+       "top": 56, // 小猿口算窗口左上角距屏幕顶部像素（不包含窗口边框，下同）
+       "left": 0, // 小猿口算窗口左上角距屏幕左侧像素
+       "width": 816, // 窗口宽度
+       "height": 1458 //窗口高度
+     },
+     "screenshotPath": "./screenshots" // 屏幕截图缓存存放位置
+   }
+   ```
+
+4. 启用脚本
+
+   ```sh
+   yarn start
+   ```
+
+​	请在胜利/失败/平局页面启动，或启动后立刻点击开始。
+​	注意：脚本速度约为0.53s/题，请不要和抓包以及改数据的天龙人作比较。
 
 ### 使用到的框架
 
