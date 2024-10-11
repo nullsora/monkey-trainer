@@ -9,7 +9,7 @@ const ocr = async (filePath, imageName) => {
         lang: "eng",
         oem: 1,
         psm: 6,
-        tessedit_char_whitelist: "0123456789"
+        tessedit_char_whitelist: "0123456789."
       }
     )
     return text

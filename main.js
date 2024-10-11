@@ -5,12 +5,12 @@ import sleep from "./tools/sleep.js"
 await clickAgainButton()
 await sleep(8500)
 
-const maxRunTime = ((
-  await Promise.all([
-    sleep(4000),
-    getQuestionCount()
-  ])
-)[1] ?? 30) + 2
+let maxRunTime = (await Promise.all([
+  sleep(4000),
+  getQuestionCount()
+]))[1]
+
+maxRunTime = (maxRunTime ? maxRunTime : 30) + 2
 
 console.log(`运行次数: ${maxRunTime}`)
 
